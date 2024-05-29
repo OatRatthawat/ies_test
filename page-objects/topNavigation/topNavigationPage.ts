@@ -1,5 +1,5 @@
 import { Page } from '@playwright/test'
-import { HelperBase } from './helperBase';
+import { HelperBase } from '../helperBase';
 
 export class TopNavigationPage extends HelperBase{
 
@@ -7,7 +7,7 @@ export class TopNavigationPage extends HelperBase{
         super(page);
     }
 
-    async allPage(){
+    async goAllPage(){
         const navigateBlog = this.page.locator('[class="shadow-md bg-white md:pt-16 md:mt-1 grid grid-cols-3 md:grid-cols-7 justify-start flex-nowrap truncate"]')
             .filter({has: this.page.locator('[class="uppercase py-4 font-sm block f transition-colors duration-300 text-white"]')})
             .filter({has: this.page.locator('.contents')});

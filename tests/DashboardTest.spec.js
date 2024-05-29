@@ -1,4 +1,5 @@
 import { test, expect} from '@playwright/test'
+import { waitForDebugger } from 'inspector';
 
 test.beforeEach(async ({page}) => {
     await page.goto('https://iesdev.technimal.co.th/auth/login');
