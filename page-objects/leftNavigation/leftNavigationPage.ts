@@ -11,7 +11,7 @@ export class LeftNavigationPage extends HelperBase{
         const navigateBlog = this.page.locator('[class="md:flex md:flex-col md:items-stretch md:opacity-100 md:relative md:mt-4 md:shadow-none shadow absolute top-0 left-0 right-0 z-40 overflow-y-auto overflow-x-hidden h-auto items-center flex-1 rounded hidden"]');
 
         //list of management
-        await navigateBlog.getByRole('img', { name: "Toggle" }).click();
+        await navigateBlog.getByRole('img', { name: "Toggle" }).first().click();
 
         const navsLotus = ["Lotus", "Lotus west", "Lotus north"];
         for( let nav of navsLotus){
